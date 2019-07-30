@@ -1,0 +1,31 @@
+You are playing a racing game. Your character starts at the x axis line (y = 0)
+and proceeds up the racetrack, which has a boundary at the line x = 0 and
+x = w. The finish is at y = h, and the game ends when you reach that line.
+You proceed at a fixed vertical velocity v, but you can control your horizontal
+velocity to be any value between -v/r and v/r, and change it at any time.
+There are a set of gems at specific points on the race track. Your job is to
+maximize the total value of the gems that you collect. Each gems has a value
+associated with it.
+What is the maximum value of the gems that your player can collect? You
+may start at any horizontal position you want (but your vertical position must
+be 0 at the start).
+Input will be in the file gems.txt. The first line will contain four integers,
+separated by commas: n (the number of gems), r (the ratio of vertical velocity
+to maximum horizontal speed), w (the width of the track), and h (the height
+of the finish line). Following this will be n lines, each containing an x and y
+coordinate, the coordinates of the gem, and a value v for the gem. All gems will
+lie within the race track.
+Your program will list off the gems that your racer will pick up in chronological order, one per line, in the file race.txt.
+For example, we might have a racecourse of length 10, a width of 10, and
+you had the same potential horizontal velocity as vertical. If there are 5 equallyvalued gems on the racetrack, the input file gems.txt might look as follows.
+5,1.,10.,10.
+8.,8.,1
+5.,1.,1
+4.,6.,1
+4.,7.,1
+7.,9.,1
+To maximize our profit, we would only choose three of them in race.txt. The
+output file looks as follows.
+5.0,1.0,1
+4.0,6.0,1
+4.0,7.0,1
